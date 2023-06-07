@@ -5,14 +5,14 @@
 }
 
 body{
-    background: linear-gradient(to top, #d5dbd7 85%, #009688  50%  );
+    background: linear-gradient(to top, #d5dbd7 80%, #009688  50%  );
 }
 
 .container{
     width: 1000px;
-    margin: 2rem auto;
+    margin: 4rem auto;
     text-align: center;
-    height: 100vh;
+    height: 95vh;
 }
 
 
@@ -22,7 +22,7 @@ div.lateralSide{
     
 }
 div.upper{
-    height: 50px;
+    height: 60px;
     background-color:#790fa2 ;
 }
 
@@ -32,17 +32,72 @@ div.rightSide{
 }
 
  div.upperRightSide{
-    height: 50px;
-    background-color:#080b12 ;
+    height: 60px;
+    background-color:#eaeaea ;
 }
 
 div.messageBox{
-    height: calc(100% - 100px);
+    height: calc(100% - 120px);
     background-color: rebeccapurple;
 }
 
 div.downRightSide{
-    height: 50px;
+    height: 60px;
+    background-color:#eaeaea ;
+}
+
+.my_fontName{
+    font-size: 12px;
+}
+
+.my_fontAccess{
+    font-size: 9px;
+}
+.my_form{
+    position: relative;
+    width: 100%;
+    height: 35px;
+    background-color: #e5e5e5;
+    border-radius: 5px;
+    display: flex;
+  flex-direction: row;
+  align-items:center;
+  
+  
+}
+#query{
+    all: unset;
+  font: 16px system-ui;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+
+}
+ ::placeholder {
+    color: #757575;
+    opacity: 0.7;
+    font-size: 13px; 
+ }
+
+button {
+    all: unset;
+    cursor: pointer;
+  }
+  
+  svg {
+    color: #050506;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0%;
     
-    background-color:#080b12 ;
+  }
+ul{
+    list-style-type: none;
+}
+.my_marginRight{
+    margin-right: 1rem;
 }
