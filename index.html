@@ -14,142 +14,152 @@
 </head>
 <body>
     <script src="https://unpkg.com/vue@3"></script>
-   <main class="background">
-    <div class="main-box container d-flex">
-        <div class="lateralSide flex-column">
-            <div class="upper d-flex justify-content-between">
-                <div class="px-1 d-flex align-items-center">
-                    <img src="img/avatar_io.jpg" alt="avatar's sofia" style="width: 45px; height: 45px; border-radius: 50%;">
-                    <h4 class="my_fontName mx-1">
-                        sofia
-                    </h4>
-                </div>
-
-                <div class="icons d-flex px-1 pt-3">
-                    <ul class="d-flex align-items-center">
-                        <li class="px-3">
-                            <i class="fa-solid fa-circle-notch"></i>
-                        </li>
-                        <li class="my_marginRight">
-                            <i class="fa-regular fa-message"></i>
-                        </li>
-                        <li class="my_marginRight">
-                            <i class="fa-solid fa-ellipsis-vertical "></i>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="notifications d-flex align-items-center">
-                <div class="circle text-center  mx-1" >
-                    <i class="fa-regular fa-bell-slash pt-3" ></i>
-                </div>
-                <div>
-                    <div class="my_fontName">
-                    
-                        Ricevi notifiche di nuovi messaggi
-                        
-                    </div>
-                    <div class="my_fontAccess text-decoration" style="color: #6ab4e4;">
-                       
-                        Attiva notifiche dekstop
-                        
-                    </div>
-
-                </div>
-                
-            </div>
-
-
-        </div>
-        <div class="rightSide column">
-            <div class="upperRightSide d-flex justify-content-between">
-                <div class="profile d-flex text-start  py-2">
-                    <div class="px-1">
-                        <img src="img/avatar_1.jpg" alt="avatar's michele" style="width: 45px; height: 45px; border-radius: 50%;">
-
-                    </div>
-                    <div class="px-1 py-2">
-                        <h4 class="my_fontName">
-                            Michele
-                        </h4>
-                        <p class="my_fontAccess">
-                            Ultimo accesso oggi alle 12:00
-                        </p>
-                    </div>
-                    
-                </div>
-                <div class="icons d-flex px-1 pt-3">
-                    <ul class="d-flex align-items-center">
-                        <li >
-                            <form class="my_form text-light  " role="search">
-                                <button >
-                                   <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
-                               </button>
-                               <input type="search" id="query" name="q"
-                                placeholder="" >
-                           </form>
-                        </li>
-                        <li class="my_marginRight">
-                            <i class="fa-solid fa-link"></i>
-                        </li>
-                        <li class="my_marginRight">
-                            <i class="fa-solid fa-ellipsis-vertical "></i>
-                        </li>
-                    </ul>
-                    
-                </div>
-               
-                
-
-            </div>
-            <div class=" messageBox">
-                <div >
-                    <div class="my_userForm1 formPosition"  >
-                        <input class="form-control" type="text" placeholder="Hai portato a spasso il cane?" aria-label="" style="background-color: #d5f9ba;">
-                    </div>
-                    <div class="my_userForm2 formPosition" >
-                        <input class="form-control" type="text" placeholder="Ricordati di stendere i panni" aria-label="" style="background-color: #d5f9ba;">
-                    </div>
-                </div>
-                <div >
-                    <div class="my_interlocutorForm ">
-                        <input class="form-control" type="text" placeholder="Tutto fatto!" aria-label="" >
-                    </div>
-                </div>
-                
-
-            </div>
-            <div class="downRightSide d-flex align-items-center justify-content-evenly">
-                <div>
-                    
-                        <i class="fa-regular fa-face-smile"></i>
-                    
-                </div>
-                <div class="my_downForm" >
-                    <input class="form-control" type="text" placeholder="Scrivi un messaggio" aria-label="">
-                </div>
-                <div>
-                   
-                        <i class="fa-solid fa-microphone"></i>
-                    
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-   </main>
-
    
-
-   
-
-
-
-
-
     <div id="app">
+        <main >
+            <div class="main-box container d-flex">
+                <div class="lateralSide flex-column ">
+                    <div class="upper d-flex justify-content-between ">
+                        <div class="px-1 d-flex align-items-center mx-3">
+                            <img src="img/avatar_io.jpg" alt="avatar's sofia" style="width: 45px; height: 45px; border-radius: 50%;">
+                            <h4 class="my_fontName mx-1">
+                                sofia
+                            </h4>
+                        </div>
+        
+                        <div class="icons d-flex px-1 pt-3">
+                            <ul class="d-flex align-items-center">
+                                <li class="px-3">
+                                    <i class="fa-solid fa-circle-notch" style="color: #b2b5b8;"></i>
+                                </li>
+                                <li class="my_marginRight">
+                                    <i class="fa-solid fa-message" style="color: #b2b5b8;"></i>
+                                </li>
+                                <li class="my_marginRight">
+                                    <i class="fa-solid fa-ellipsis-vertical " style="color: #b2b5b8;"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="notifications d-flex align-items-center ">
+                        <div class="circle text-center  mx-3" >
+                            <i class="fa-solid fa-bell-slash pt-3" style="color: #8edafc;" ></i>
+                        </div>
+                        <div>
+                            <div class="my_fontName">
+                                Ricevi notifiche di nuovi messaggi 
+                            </div>
+                            <div class="my_fontAccess text-decoration" style="color: #6ab4e4;">
+                                Attiva notifiche dekstop
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my_searchBar " >
+                        <form class="my_form text-light  mx-3" role="search" style="background-color: white;">
+                            <button >
+                               <svg class="lentLeftSide" viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                           </button>
+                           <input type="search" id="query" name="q" 
+                            placeholder="Cerca o inizia una nuova chat" >
+                       </form>
+                    </div>
+                    <div v-for = "(contact, index) in contacts">
+                        <div class="d-flex  mx-3 text-start"  >
+                            <img :src= "contact.avatar" alt="" style="width: 45px; height: 45px; border-radius: 50%;">
+                            <div class="userContact align-items-center">
+                                <div class="my_fontContact pt-2" >
+                                    {{ contact.name}}
+                                </div>
+                                <div class="my_fontVisible" v-if ="contact.visible">
+                                    {{ lastMessage}}
+                                </div>
+                                
+                            </div>
+                        </div>
+                    
+                    </div>
+        
+        
+                </div>
+                <div class="rightSide column">
+                    <div class="upperRightSide d-flex justify-content-between">
+                        <div class="profile d-flex text-start  py-2">
+                            <div class="px-1">
+                                <img src="img/avatar_1.jpg" alt="avatar's michele" style="width: 45px; height: 45px; border-radius: 50%;">
+        
+                            </div>
+                            <div class="px-1 py-2">
+                                <h4 class="my_fontName">
+                                    Michele
+                                </h4>
+                                <p class="my_fontAccess ">
+                                    Ultimo accesso oggi alle 12:00
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div class="icons d-flex px-1 pt-3">
+                            <ul class="d-flex align-items-center">
+                                <li >
+                                    <form class="my_form  text-light  " role="search">
+                                        <button >
+                                           <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                                       </button>
+                                       <input type="search" id="query" name="q"
+                                        placeholder="" >
+                                   </form>
+                                </li>
+                                <li class="my_marginRight" style="color: #b2b5b8;">
+                                    <i class="fa-solid fa-link"></i>
+                                </li>
+                                <li class="my_marginRight" style="color: #b2b5b8;">
+                                    <i class="fa-solid fa-ellipsis-vertical "></i>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                       
+                        
+        
+                    </div>
+                    <div class=" messageBox">
+                        <div >
+                            <div class="my_userForm1 formPosition"  >
+                                <input class="form-control" type="text" placeholder="Hai portato a spasso il cane?" aria-label="" style="background-color: #d5f9ba;">
+                            </div>
+                            <div class="my_userForm2 formPosition" >
+                                <input class="form-control" type="text" placeholder="Ricordati di stendere i panni" aria-label="" style="background-color: #d5f9ba;">
+                            </div>
+                        </div>
+                        <div >
+                            <div class="my_interlocutorForm ">
+                                <input class="form-control" type="text" placeholder="Tutto fatto!" aria-label="" >
+                            </div>
+                        </div>
+                        
+        
+                    </div>
+                    <div class="downRightSide d-flex align-items-center justify-content-evenly">
+                        <div>
+                            
+                            <i class="fa-regular fa-face-smile" style="color: #b2b5b8;"></i>
+                            
+                        </div>
+                        <div class="my_downForm" >
+                            <input class="form-control" type="text" placeholder="Scrivi un messaggio" aria-label="" >
+                        </div>
+                        <div>
+                           
+                        <i class="fa-solid fa-microphone" style="color: #b2b5b8;"></i>
+                            
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
+            </div>
+        </main>
     </div>
 
     <script src="./js/vue.js">
