@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1000px;
+    margin: 2rem auto;
+    text-align: center;
+    height: 100vh;
+}
+
+
+div.lateralSide{
+    width: 40vw;
+    background-color: #2557ca;
+    
+}
+div.upper{
+    height: 50px;
+    background-color:#790fa2 ;
+}
+
+div.rightSide{
+    width: 60vw;
+    background-color: aqua;
+}
+
+ div.upperRightSide{
+    height: 50px;
+    background-color:#080b12 ;
+}
+
+div.messageBox{
+    height: calc(100% - 100px);
+    background-color: rebeccapurple;
+}
+
+div.downRightSide{
+    height: 50px;
+    
+    background-color:#080b12 ;
+}
