@@ -16,10 +16,49 @@
     <script src="https://unpkg.com/vue@3"></script>
    <main class="background">
     <div class="main-box container d-flex">
-        <div class="lateralSide">
-            <div class="upper">
+        <div class="lateralSide flex-column">
+            <div class="upper d-flex justify-content-between">
+                <div class="px-1 d-flex align-items-center">
+                    <img src="img/avatar_io.jpg" alt="avatar's sofia" style="width: 45px; height: 45px; border-radius: 50%;">
+                    <h4 class="my_fontName mx-1">
+                        sofia
+                    </h4>
+                </div>
 
+                <div class="icons d-flex px-1 pt-3">
+                    <ul class="d-flex align-items-center">
+                        <li class="px-3">
+                            <i class="fa-solid fa-circle-notch"></i>
+                        </li>
+                        <li class="my_marginRight">
+                            <i class="fa-regular fa-message"></i>
+                        </li>
+                        <li class="my_marginRight">
+                            <i class="fa-solid fa-ellipsis-vertical "></i>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <div class="notifications d-flex align-items-center">
+                <div class="circle text-center  mx-1" >
+                    <i class="fa-regular fa-bell-slash pt-3" ></i>
+                </div>
+                <div>
+                    <div class="my_fontName">
+                    
+                        Ricevi notifiche di nuovi messaggi
+                        
+                    </div>
+                    <div class="my_fontAccess text-decoration" style="color: #6ab4e4;">
+                       
+                        Attiva notifiche dekstop
+                        
+                    </div>
+
+                </div>
+                
+            </div>
+
 
         </div>
         <div class="rightSide column">

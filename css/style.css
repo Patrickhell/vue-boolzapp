@@ -18,12 +18,17 @@ body{
 
 div.lateralSide{
     width: 30vw;
-    background-color: #2557ca;
+    background-color: #ffffff
     
 }
 div.upper{
     height: 60px;
-    background-color:#790fa2 ;
+    background-color:#eaeaea ;
+}
+div.notifications{
+    height: 70px;
+    background-color:#8edafc;
+    text-align: start;
 }
 
 div.rightSide{
@@ -39,7 +44,7 @@ div.rightSide{
 div.messageBox{
     position: relative;
     height: calc(100% - 120px);
-background-color: #e5dcd6;
+background-image:url(../img/mine.jpg);
 }
 
 div.downRightSide{
@@ -132,4 +137,14 @@ ul{
   top: 200px;
   left: 60px;
 
+}
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.text-decoration{
+    text-decoration: underline;
 }
