@@ -17,7 +17,7 @@ body{
 
 
 div.lateralSide{
-    width: 40vw;
+    width: 30vw;
     background-color: #2557ca;
     
 }
@@ -27,8 +27,8 @@ div.upper{
 }
 
 div.rightSide{
-    width: 60vw;
-    background-color: aqua;
+    width: 70vw;
+
 }
 
  div.upperRightSide{
@@ -37,8 +37,9 @@ div.rightSide{
 }
 
 div.messageBox{
+    position: relative;
     height: calc(100% - 120px);
-    background-color: rebeccapurple;
+background-color: #e5dcd6;
 }
 
 div.downRightSide{
@@ -94,10 +95,42 @@ button {
     right: 0;
     top: 0%;
     
-  }
+}
+
 ul{
     list-style-type: none;
 }
+
 .my_marginRight{
     margin-right: 1rem;
+}
+
+.formPosition{
+    position: absolute;
+    right: 60px;
+}
+
+.my_downForm{
+    width: 80%;
+    
+}
+.my_userForm, div.my_interlocutorForm{
+    width: 200px;
+}
+.my_userForm1{
+    top: 80px;
+
+}
+
+.my_userForm2{
+    top: 120px;
+    
+
+}
+
+.my_interlocutorForm{
+    position: absolute;
+  top: 200px;
+  left: 60px;
+
 }
