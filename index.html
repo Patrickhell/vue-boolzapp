@@ -22,7 +22,7 @@
                     <div class="upper d-flex justify-content-between ">
                         <div class="px-1 d-flex align-items-center mx-3">
                             <img src="img/avatar_io.jpg" alt="avatar's sofia" style="width: 45px; height: 45px; border-radius: 50%;">
-                            <h4 class="my_fontName mx-1">
+                            <h4 class="my_font mx-1">
                                 sofia
                             </h4>
                         </div>
@@ -42,11 +42,11 @@
                         </div>
                     </div>
                     <div class="notifications d-flex align-items-center ">
-                        <div class="circle text-center  mx-3" >
-                            <i class="fa-solid fa-bell-slash pt-3" style="color: #8edafc;" ></i>
+                        <div class="circle d-flex  mx-3" >
+                            <i class="fa-solid fa-bell-slash  m-auto " style="color: #8edafc;" ></i>
                         </div>
                         <div>
-                            <div class="my_fontName">
+                            <div class="my_font">
                                 Ricevi notifiche di nuovi messaggi 
                             </div>
                             <div class="my_fontAccess text-decoration" style="color: #6ab4e4;">
@@ -54,18 +54,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="my_searchBar " >
-                        <form class="my_form text-light  mx-3" role="search" style="background-color: white;">
-                            <button class="lentLeftSide">
+                    <div class="my_searchBar d-flex align-items-center" >
+                        <form class="my_form  mx-3" role="search">
+                            <label class="lentLeftSide">
                                 <i class="fa-solid fa-magnifying-glass" style="color: #b2b5b8;"></i>                                       
-                            </button>
-                           <input type="search" id="query" name="q" 
-                            placeholder="Cerca o inizia una nuova chat" >
+                            </label>
+                            <input class="border-0" type="text" id="query" placeholder="Cerca o inizia una nuova chat" >
                        </form>
                     </div>
-                    <div class="contacts" id="scrollbar" v-for = "(contact, index) in contacts">
-                        <div class="d-flex  mx-3 text-start"  >
-                            <img :src= "contact.avatar" alt="" style="width: 45px; height: 45px; border-radius: 50%;">
+                    <div class="contacts"  v-for = "(contact, index) in contacts"
+                         :class=" activeIndex === index ? 'active' : '' " >
+                        <div class="d-flex  mx-3 text-start" @click ="showMessage(index)" >
+                            <img :src= "contact.avatar" alt="" style="width: 45px; height: 45px; border-radius: 50%;" @click ="activeContact()">
+                             
                             <div class="userContact align-items-center">
                                 <div class="my_fontContact pt-2" >
                                     {{ contact.name}}
@@ -74,6 +75,20 @@
                                     {{ lastMessage}}
                                 </div>
                                 
+                            </div>
+                            
+                        </div>
+                        <div class="showMessages">
+                            <div class="showMessage" v-for ="(infoMessage, index) in contacts[activeIndex].messages" >
+                                <div class="my_font " :class ="infoMessage.status === 'sent' ">
+                                   
+                                    <span >
+                                        {{infoMessage.message}}
+                                    </span>
+                                    <p >
+                                        {{infoMessage.date}}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     
@@ -89,7 +104,7 @@
         
                             </div>
                             <div class="px-1 py-2">
-                                <h4 class="my_fontName">
+                                <h4 class="my_font">
                                     Michele
                                 </h4>
                                 <p class="my_fontAccess ">
@@ -100,14 +115,9 @@
                         </div>
                         <div class="icons d-flex px-1 pt-3">
                             <ul class="d-flex align-items-center">
-                                <li >
-                                    <form class="my_form  text-light  " role="search">
-                                        <button class="lentRightSide">
-                                            <i class="fa-solid fa-magnifying-glass" style="color: #b2b5b8;"></i>                                       
-                                        </button>
-                                       <input type="search" id="query" name="q"
-                                        placeholder="" >
-                                   </form>
+                                <li class="my_marginRight">
+                                    <i class="fa-solid fa-magnifying-glass" style="color: #b2b5b8;"></i>                                       
+
                                 </li>
                                 <li class="my_marginRight" style="color: #b2b5b8;">
                                     <i class="fa-solid fa-paperclip"></i>
@@ -124,16 +134,16 @@
                     </div>
                     <div class=" messageBox">
                         <div >
-                            <div class="my_userForm1 formPosition"  >
-                                <input class="form-control" type="text" placeholder="Hai portato a spasso il cane?" aria-label="" style="background-color: #d5f9ba;">
+                            <div class="my_FirstUserSms my_UserSms" style="background-color: #d5f9ba;" >
+                                <p> Hai portato a spasso il cane?</p>
                             </div>
-                            <div class="my_userForm2 formPosition" >
-                                <input class="form-control" type="text" placeholder="Ricordati di stendere i panni" aria-label="" style="background-color: #d5f9ba;">
+                            <div class="my_secondUserSms my_UserSms" style="background-color: #d5f9ba;">
+                                  <p> Ricordati di stendere i panni</p>
                             </div>
                         </div>
                         <div >
-                            <div class="my_interlocutorForm ">
-                                <input class="form-control" type="text" placeholder="Tutto fatto!" aria-label="" >
+                            <div class="my_interlocutorsms my_UserSms" style="background-color: white">
+                                <p> Tutto fatto!</p>
                             </div>
                         </div>
                         
