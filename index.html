@@ -56,14 +56,14 @@
                     </div>
                     <div class="my_searchBar " >
                         <form class="my_form text-light  mx-3" role="search" style="background-color: white;">
-                            <button >
-                               <svg class="lentLeftSide" viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
-                           </button>
+                            <button class="lentLeftSide">
+                                <i class="fa-solid fa-magnifying-glass" style="color: #b2b5b8;"></i>                                       
+                            </button>
                            <input type="search" id="query" name="q" 
                             placeholder="Cerca o inizia una nuova chat" >
                        </form>
                     </div>
-                    <div v-for = "(contact, index) in contacts">
+                    <div class="contacts" id="scrollbar" v-for = "(contact, index) in contacts">
                         <div class="d-flex  mx-3 text-start"  >
                             <img :src= "contact.avatar" alt="" style="width: 45px; height: 45px; border-radius: 50%;">
                             <div class="userContact align-items-center">
@@ -102,15 +102,15 @@
                             <ul class="d-flex align-items-center">
                                 <li >
                                     <form class="my_form  text-light  " role="search">
-                                        <button >
-                                           <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
-                                       </button>
+                                        <button class="lentRightSide">
+                                            <i class="fa-solid fa-magnifying-glass" style="color: #b2b5b8;"></i>                                       
+                                        </button>
                                        <input type="search" id="query" name="q"
                                         placeholder="" >
                                    </form>
                                 </li>
                                 <li class="my_marginRight" style="color: #b2b5b8;">
-                                    <i class="fa-solid fa-link"></i>
+                                    <i class="fa-solid fa-paperclip"></i>
                                 </li>
                                 <li class="my_marginRight" style="color: #b2b5b8;">
                                     <i class="fa-solid fa-ellipsis-vertical "></i>
@@ -146,7 +146,7 @@
                             
                         </div>
                         <div class="my_downForm" >
-                            <input class="form-control" type="text" placeholder="Scrivi un messaggio" aria-label="" >
+                            <input class="form-control  border-0" type="text" placeholder="Scrivi un messaggio" aria-label=""  >
                         </div>
                         <div>
                            

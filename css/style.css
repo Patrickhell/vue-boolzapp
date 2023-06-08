@@ -10,7 +10,7 @@ body{
 
 .container{
     width: 1000px;
-    margin: 4rem auto;
+    margin: 1.5rem auto;
     text-align: center;
    
 }
@@ -26,14 +26,13 @@ div.upper{
     background-color:#eaeaea ;
 }
 div.notifications{
-    height: 70px;
+    height: 75px;
     background-color:#8edafc;
     text-align: start;
 }
 
 div.rightSide{
     width: 70vw;
-
 }
 
  div.upperRightSide{
@@ -45,6 +44,10 @@ div.messageBox{
     position: relative;
     height: calc(100% - 120px);
 background-image:url(../img/mine.jpg);
+overflow-y:scroll;
+scroll-behavior: smooth;
+
+    
 }
 
 div.downRightSide{
@@ -81,34 +84,28 @@ div.downRightSide{
 
 }
  ::placeholder {
-    color: #757575;
+    color: #b2b5b8;
     opacity: 0.7;
     font-size: 13px; 
  }
-
-button {
+ button{
     all: unset;
     cursor: pointer;
-  }
+ }
+
+.lentRightSide {
+    position: absolute;
+    right: 5%;
+    bottom: 2%;  
   
-  svg {
-    color: #b2b5b8;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    position: absolute;
-    right: 0;
-    top: 0%;   
 }
-button svg.lentLeftSide{
-    color:  #b2b5b8;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
+
+.lentLeftSide{
     position: absolute;
-   left: 0;
-    top: 0%;   
+    left: 5%;
+    bottom: 2%; 
 }
+ 
 
 ul{
     list-style-type: none;
@@ -172,3 +169,15 @@ div.userContact{
     font-size: 8px;
     color: #a9b9cc;
 }
+div.contacts{
+    overflow-y:scroll;
+    scroll-behavior: smooth;
+    
+    
+}
+#scrollbar::-webkit-scrollbar-track{
+    background-color: #b54a4a;
+    
+   
+}
+
