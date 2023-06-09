@@ -10,7 +10,7 @@ body{
 
 .container{
     width: 1000px;
-    margin: 1.5rem auto;
+    margin: 4rem auto;
     text-align: center;
    
 }
@@ -44,8 +44,9 @@ div.messageBox{
     position: relative;
     height: calc(100% - 120px);
 background-image:url(../img/mine.jpg);
-overflow-y:scroll;
-scroll-behavior: smooth;
+overflow-x: hidden;
+overflow-y: scroll;
+
 
     
 }
@@ -55,7 +56,7 @@ div.downRightSide{
     background-color:#eaeaea ;
 }
 
-.my_fontName{
+.my_font{
     font-size: 12px;
 }
 
@@ -66,39 +67,36 @@ div.downRightSide{
     position: relative;
     width: 300px;
     height: 30px;
-    background-color: #eaeaea ;
     border-radius: 5px;
     display: flex;
   flex-direction: row;
   align-items:center;
+}
+input{
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
 }
 
 
 #query{
     all: unset;
   font: 16px system-ui;
-  color: #fff;
   height: 100%;
   width: 100%;
   padding: 6px 10px;
 
 }
  ::placeholder {
-    color: #b2b5b8;
-    opacity: 0.7;
     font-size: 13px; 
  }
  button{
     all: unset;
     cursor: pointer;
- }
-
-.lentRightSide {
-    position: absolute;
-    right: 5%;
-    bottom: 2%;  
-  
 }
+
 
 .lentLeftSide{
     position: absolute;
@@ -115,35 +113,39 @@ ul{
     margin-right: 1rem;
 }
 
-.formPosition{
-    position: absolute;
-    right: 60px;
-}
-
 .my_downForm{
     width: 80%;
     
 }
-.my_userForm, div.my_interlocutorForm{
-    width: 200px;
-}
-.my_userForm1{
-    top: 80px;
+
+.showMessage{
+    height:35px;
+    font-size: 12px;
+    border-radius: 30px;
+    padding: 2rem;
 
 }
 
-.my_userForm2{
-    top: 120px;
+.messageReceived{
+    float: left;
+    background-color: white;
+}
+
+
+.float::after{
+    content: "";
+    display:table;
+    clear: both;
+   
+}
+
+.messageSent{
+    float: right;
+    background-color: #d5f9ba;
     
-
 }
 
-.my_interlocutorForm{
-    position: absolute;
-  top: 200px;
-  left: 60px;
 
-}
 .circle{
     width: 45px;
     height: 45px;
@@ -156,6 +158,7 @@ ul{
 }
 div.my_searchBar{
     height: 50px;
+
 
 }
 div.userContact{
@@ -170,14 +173,22 @@ div.userContact{
     color: #a9b9cc;
 }
 div.contacts{
-    overflow-y:scroll;
-    scroll-behavior: smooth;
+   overflow: auto;
+   overflow-y: scroll;
     
     
 }
-#scrollbar::-webkit-scrollbar-track{
-    background-color: #b54a4a;
-    
-   
+
+.active {
+    background-color:#e9ebeb
 }
+
+.fontDate{
+    font-size: 8px;
+}
+
+.hiddenMessage{
+    display: none;
+}
+
 

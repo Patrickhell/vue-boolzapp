@@ -167,13 +167,64 @@ createApp({
                 }
             ],
             lastMessage : "ultimo messaggio inviato",
+            activeIndex : 0,
+            inputMessage : "",
+        
             
-            
-            
-            
-            
+           
 
-
+            
+            
         }
-    }
+    },
+    methods: {
+
+        activeContact(){
+            if (this.activeIndex === this.contacts.length){
+                this.activeIndex = 0
+            }
+
+
+        },
+
+        showMessage(messageIndex){
+            if ( messageIndex >= this.contacts.length || messageIndex < 0 ){
+                return false
+            }
+            this.activeIndex = messageIndex;
+
+        },
+
+
+
+        insertMessage: function(){
+            if(this.inputMessage != ""){
+                let messageItems = {
+                    message: this.inputMessage,
+                    status: 'sent',
+                }
+                this.contacts[this.activeIndex].messages.push(messageItems)
+                this.rixAuto(this.inputMessage)
+                this.inputMessage = ""
+                
+            }
+        },
+	
+
+		rixAuto: function(message) {
+			console.log(message);
+			let msg = message;
+            setTimeout(() => {
+                let messageItems  = {
+                    message: "ok",
+                    status: 'received',
+                }
+                this.contacts[this.activeIndex].messages.push(messageItems)
+                console.log(msg);
+            }, 1000);
+        },
+
+                
+        }
+
 }).mount( "#app")
