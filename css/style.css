@@ -63,15 +63,7 @@ div.downRightSide{
 .my_fontAccess{
     font-size: 9px;
 }
-.my_form{
-    position: relative;
-    width: 300px;
-    height: 30px;
-    border-radius: 5px;
-    display: flex;
-  flex-direction: row;
-  align-items:center;
-}
+
 input{
     width: 500px;
     height: 40px;
@@ -80,24 +72,10 @@ input{
     outline: none;
 }
 
-
-#query{
-    all: unset;
-  font: 16px system-ui;
-  height: 100%;
-  width: 100%;
-  padding: 6px 10px;
-
-}
  ::placeholder {
     font-size: 13px; 
  }
- button{
-    all: unset;
-    cursor: pointer;
-}
-
-
+ 
 .lentLeftSide{
     position: absolute;
     left: 5%;
@@ -118,17 +96,19 @@ ul{
     
 }
 
-.showMessage{
-    height:35px;
+div.showMessage{
+   height: 40px;
     font-size: 12px;
-    border-radius: 30px;
-    padding: 2rem;
+    margin-top: 1rem;
+    padding:1rem;
 
 }
 
 .messageReceived{
     float: left;
     background-color: white;
+    border-radius: .9rem;
+    padding-top: .5rem;
 }
 
 
@@ -142,7 +122,9 @@ ul{
 .messageSent{
     float: right;
     background-color: #d5f9ba;
-    
+    border-radius: .8rem;
+    padding-top: .4rem;
+
 }
 
 
@@ -173,14 +155,13 @@ div.userContact{
     color: #a9b9cc;
 }
 div.contacts{
-   overflow: auto;
-   overflow-y: scroll;
+   overflow-y: auto;
     
     
 }
 
 .active {
-    background-color:#e9ebeb
+    background-color:#c1dfdf
 }
 
 .fontDate{

@@ -165,13 +165,16 @@ createApp({
                         }
                     ],
                 }
+
+                
             ],
             lastMessage : "ultimo messaggio inviato",
             activeIndex : 0,
             inputMessage : "",
+            inputName : "",
         
             
-           
+            
 
             
             
@@ -179,19 +182,9 @@ createApp({
     },
     methods: {
 
-        activeContact(){
-            if (this.activeIndex === this.contacts.length){
-                this.activeIndex = 0
-            }
+        activeContact(index){
+                this.activeIndex = index
 
-
-        },
-
-        showMessage(messageIndex){
-            if ( messageIndex >= this.contacts.length || messageIndex < 0 ){
-                return false
-            }
-            this.activeIndex = messageIndex;
 
         },
 
@@ -212,7 +205,6 @@ createApp({
 	
 
 		rixAuto: function(message) {
-			console.log(message);
 			let msg = message;
             setTimeout(() => {
                 let messageItems  = {
@@ -220,9 +212,28 @@ createApp({
                     status: 'received',
                 }
                 this.contacts[this.activeIndex].messages.push(messageItems)
-                console.log(msg);
             }, 1000);
         },
+
+        searchName(){
+            let search = this.inputName.toLowerCase();
+            console.log(search);
+
+            this.contacts.forEach((contact) => {
+                if ( contact.name.toLowerCase().includes(search)){
+                   contact.name = contact.name;
+                    
+                }else{
+                    contact.name = "";
+                }
+                
+            });
+            
+        },
+
+        
+
+      
 
                 
         }

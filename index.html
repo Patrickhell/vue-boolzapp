@@ -54,24 +54,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="my_searchBar d-flex align-items-center" >
-                        <form class="my_form  mx-3" role="search">
-                            <label class="lentLeftSide">
-                                <i class="fa-solid fa-magnifying-glass" style="color: #b2b5b8;"></i>                                       
-                            </label>
-                            <input class="border-0" type="text" id="query" placeholder="Cerca o inizia una nuova chat" >
-                       </form>
+                    <div class="my_searchBar d-flex align-items-center mx-2" >
+                        <i class="fa-solid fa-magnifying-glass mx-4 " style="color: #b2b5b8;"></i>                                                             
+                        <input  v-model ="inputName"  @keyup.enter = "searchName"  placeholder="Cerca o inizia una nuova chat" />   
                     </div>
-                    <div class="contacts"  v-for = "(contact, index) in contacts"
-                         :class=" activeIndex === index ? 'active' : '' " @click ="activeContact()" >
-                        <div class="d-flex  mx-3 text-start" @click ="showMessage(index)" >
-                            <img :src= "contact.avatar" alt="" style="width: 45px; height: 45px; border-radius: 50%;" >
+                    <div class="contacts"  v-for = "(contact, index) in contacts" @click ="activeContact(index)"
+                         :class=" activeIndex === index ? 'active' : '' " >
+                        <div class="d-flex  mx-3 text-start" >
+                            <img :src= "contact.avatar" :alt="contact.name + 'avatar'" style="width: 45px; height: 45px; border-radius: 50%;">
                              
-                            <div class="userContact align-items-center">
+                            <div class="userContact align-items-center mx-1">
                                 <div class="my_fontContact pt-2" >
                                     {{ contact.name}}
                                 </div>
-                                <div class="my_fontVisible" v-show ="contact.visible">
+                                <div class="my_fontVisible mx-1">
                                     {{ lastMessage}}
                                 </div>
                                 
@@ -121,7 +117,7 @@
                     </div>
                     <div class=" messageBox">
                         <div class="showMessages">
-                            <div class="showMessage float" v-for ="(infoMessage, index) in contacts[activeIndex].messages" >
+                            <div class="showMessage  float" v-for ="(infoMessage, index) in contacts[activeIndex].messages" >
                                 <div class="my_font messageInterlocutor" :class ="(infoMessage.status === 'sent' ) ? 'messageSent' : 'messageReceived' ">
                                    
                                     <span class="p-3 ">
@@ -142,7 +138,7 @@
                             <i class="fa-regular fa-face-smile" style="color: #b2b5b8;"></i>
                             
                         </div>
-                        <input type="text" v-model ="inputMessage" @keyup.enter = "insertMessage"  placeholder="Scrivi un messaggio">
+                        <input type="text" v-model ="inputMessage" @keyup.enter = "insertMessage"  placeholder=" Scrivi un messaggio">
 
                         <div >
                            
